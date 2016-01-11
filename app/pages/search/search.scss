@@ -1,0 +1,30 @@
+[page=search]{
+    min-height:50vh;
+    padding:10px;
+    .item{
+        margin:10px 0;
+        font-size: 0;
+        height:40px;
+        border:1px solid #ccc;
+        input{
+            appearance:none;
+            border:none;
+            height:100%;
+            display: inline-block;
+            font-size:14px;
+            width:100%;
+        }
+    }
+    .btn{
+        appearance:none;
+        outline:none;
+        border:1px solid #ccc;
+        display:block;
+        width:100%;
+        background-color: #fff;
+        height:40px;
+        &:active{
+            background-color: #ccc;
+        }
+    }    
+}

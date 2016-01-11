@@ -1,0 +1,17 @@
+<div router="alter" ng-controller="alterCtrl">
+    <form name="alter" novalidate>
+        <div class="item"  ng-class="{'invalid':alter.userCode.$invalid&&alter.userCode.$touched}">
+            <span class="label">用&ensp;户&ensp;名:</span><input type="text" name="userCode" required ng-model="user.userCode">
+        </div>
+        <div class="item" ng-class="{'invalid':alter.oldpassword.$invalid&&alter.oldpassword.$touched}">
+            <span class="label">当前密码:</span><input type="password" required name="oldpassword" ng-pattern="/[a-z]/" ng-model="user.oldpassword">
+        </div>
+        <div class="item" ng-class="{'invalid':alter.newpassword.$invalid&&alter.newpassword.$touched}">
+            <span class="label">新&ensp;密&ensp;码:</span><input type="password" same="user.newpassword1" name="newpassword" required ng-model="user.newpassword">
+        </div>
+        <div class="item" ng-class="{'invalid':alter.newpassword1.$invalid&&alter.newpassword1.$touched}">
+            <span class="label">确认密码:</span><input type="password" same="user.newpassword" required name="newpassword1" ng-model="user.newpassword1">
+        </div>
+        <input type="button" ng-disabled="alter.$invalid" value="修改" class="btn" ng-click="clickHandle(user)">
+    </form>
+</div>

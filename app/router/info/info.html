@@ -1,0 +1,50 @@
+<div router="info" ng-controller="infoCtrl">
+    <div class="container">    
+        <div class="item">
+            <span class="label">保&ensp;单&ensp;号：</span>
+            <span class="v">{{data.safeguardID}}</span>
+        </div>
+        <div class="item">
+            <span class="label">姓&#x3000;&#x3000;名：</span>
+            <span class="v">{{data.name}}</span>
+        </div>
+        <div class="item">
+            <span class="label">电&#x3000;&#x3000;话：</span>
+            <span class="v">{{data.phone}}</span>
+        </div>
+        <div class="item">
+            <span class="label">身份证号：</span>
+            <span class="v">{{data.identityNo}}</span>
+        </div>
+        <div class="item">
+            <span class="label">投保手机：</span>
+            <span class="v">{{data.phoneDetail}}</span>
+        </div>
+        <div class="item">
+            <span class="label">IMEI&#x3000;码：</span>
+            <span class="v">{{data.phoneIMEI}}</span>
+        </div>
+        <div class="item">
+            <span class="label">份&#x3000;&#x3000;数：</span>
+            <span class="v">{{data.safeNum}}份</span>
+        </div>
+        <div class="item">
+            <span class="label">金&#x3000;&#x3000;额：</span>
+            <span class="v">{{data.price|currency:'￥'}}</span>
+        </div>
+        <div class="item">
+            <span class="label">照&#x3000;&#x3000;片：</span>
+            <span class="v">
+                <div class="show" ng-class="{'imgState':imgState}" ng-click="imgClickHandle()">
+                    <img ng-src="{{data.phoneImage}}">
+                    <div class="tips">缩 略 图</div>
+                </div>
+            </span>
+        </div>
+        <div class="item">
+            <span class="label tips" ng-show="data.isPay">已&ensp;支&ensp;付</span>            
+        </div>
+        <input ng-hide="data.isPay" ng-click="clickHandle()" type="button" value="支付" class="btn">
+
+    </div>
+</div>

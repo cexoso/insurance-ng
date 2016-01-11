@@ -1,0 +1,42 @@
+[router=alter] {
+  padding: 10px; }
+  [router=alter] .item {
+    margin: 10px 0;
+    font-size: 0;
+    height: 40px;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+    transition: 0.5s all; }
+    [router=alter] .item.invalid {
+      border: 1px solid #da4f49; }
+    [router=alter] .item .label {
+      font-size: 14px;
+      vertical-align: center;
+      display: inline-block;
+      width: 6em;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 5px; }
+    [router=alter] .item input {
+      display: table-cell;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      border: none;
+      height: 100%;
+      display: inline-block;
+      font-size: 14px;
+      width: 100%; }
+  [router=alter] .btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    height: 40px; }
+    [router=alter] .btn:active {
+      background-color: #ccc; }

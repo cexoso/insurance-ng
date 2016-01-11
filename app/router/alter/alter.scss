@@ -1,0 +1,46 @@
+[router=alter]{    
+    padding:10px;
+    .item{
+        margin:10px 0;
+        font-size: 0;
+        height:40px;
+        width:100%;
+        display:table;
+        border:1px solid #ccc;
+        transition:0.5s all;
+        &.invalid{
+            border:1px solid #da4f49;
+        }
+        .label{
+            font-size:14px;
+            vertical-align: center;
+            display:inline-block;
+            width:6em;
+            display:table-cell;
+            vertical-align: middle;
+            padding:0 5px;
+        }
+        input{
+            display:table-cell;
+            appearance:none;
+            border:none;
+            height:100%;
+            display: inline-block;
+            font-size:14px;
+            width:100%;            
+        }
+    }
+    .btn{
+        appearance:none;
+        outline:none;
+        border:1px solid #ccc;
+        display:block;
+        width:100%;
+        background-color: #fff;
+        height:40px;        
+        &:active{
+            background-color: #ccc;
+
+        }
+    }    
+}

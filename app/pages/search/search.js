@@ -1,0 +1,12 @@
+angular.module('insurance').controller("searchCtrl",["$scope","order","$state","loading",function(s,order,$state,loading){
+    s.data={};
+    s.clickHandle=function(){
+        loading.push(order.get(s.data).success(function(d){
+            if(d.code!=200){
+                alert(d.msg);
+            }else{
+                $state.go("info",s.data);
+            }
+        }));
+    }
+}]);

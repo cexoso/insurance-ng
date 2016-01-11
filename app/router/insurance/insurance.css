@@ -1,0 +1,106 @@
+[router=insurance] {
+  min-height: 50vh;
+  padding: 10px; }
+  [router=insurance] .item {
+    margin: 10px 0;
+    font-size: 0;
+    height: 40px;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc; }
+    [router=insurance] .item.invalid {
+      border: 1px solid #da4f49; }
+    [router=insurance] .item .label {
+      font-size: 14px;
+      vertical-align: center;
+      display: inline-block;
+      width: 5em;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 5px; }
+    [router=insurance] .item input {
+      display: table-cell;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      border: none;
+      height: 37px;
+      display: inline-block;
+      font-size: 14px;
+      width: 100%; }
+    [router=insurance] .item .photo {
+      height: 100%;
+      position: relative; }
+      [router=insurance] .item .photo input {
+        opacity: 0;
+        position: relative;
+        z-index: 2; }
+      [router=insurance] .item .photo .v {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        font-size: 14px;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 40px; }
+  [router=insurance] .check {
+    display: inline-block; }
+  [router=insurance] .provision {
+    display: inline-block; }
+    [router=insurance] .provision input {
+      display: none; }
+    [router=insurance] .provision label {
+      color: rebeccapurple; }
+  [router=insurance] .provision_show {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ccc;
+    z-index: 11;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    overflow: auto;
+    transition: 0.3s transform; }
+    [router=insurance] .provision_show.p_show {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+  [router=insurance] .btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    height: 40px; }
+    [router=insurance] .btn:active {
+      background-color: #ccc; }
+  [router=insurance] .show {
+    position: relative; }
+    [router=insurance] .show img {
+      width: 100px;
+      height: 100px;
+      box-shadow: 0 0 0 1px #000,0 0 0 2px #fff,0 0 0 3px #000;
+      margin: 10px 3px;
+      position: relative;
+      z-index: 2;
+      display: inline-block; }
+    [router=insurance] .show .tips {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 106px;
+      text-align: center;
+      -webkit-transform: translate(0, -50%) rotate(-5deg);
+              transform: translate(0, -50%) rotate(-5deg);
+      color: #aaa;
+      z-index: 1;
+      border-radius: 1px; }

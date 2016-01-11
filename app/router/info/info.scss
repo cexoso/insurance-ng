@@ -1,0 +1,78 @@
+[router=info]{
+    padding:10px;
+    min-height: 100vh;
+    position: relative;
+    .container{
+        position:absolute;
+        top: 10px;
+        bottom: 10px;
+        left:10px;
+        right:10px;
+        border:1px solid #ccc;
+        overflow:auto;
+        .item{            
+            padding:5px;
+            .tips{
+                color:#C52626;
+            }
+        }
+        .show{
+            position:relative;
+            display: inline-block;
+            vertical-align: top;
+            &.imgState{
+                position:fixed;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                z-index: 20;
+                img{
+                    max-width:100%;
+                    max-height:100%;
+                    width:auto;
+                    height:auto;
+                    position:absolute;
+                    top: 50%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                }                
+            }            
+            img{
+                width:100px;
+                height:100px;
+                box-shadow: 0 0 0 1px #000,0 0 0 2px #fff,0 0 0 3px #000;
+                margin:10px 3px;
+                position:relative;
+                z-index: 2;
+            }
+            .tips{
+                position:absolute;
+                top: 45%;
+                left:0;
+                width:106px;
+                text-align: center;
+                transform:translate(0,-50%) rotate(-5deg);
+                color:#aaa;
+                z-index: 1;
+                border-radius:1px;
+            }
+        }    
+        .btn{
+            position:absolute;            
+            left:0;
+            right:0;
+            appearance:none;
+            outline:none;
+            border:1px solid #ccc;
+            display:block;
+            width:90%;
+            margin:10px auto;
+            background-color: #fff;
+            height:40px;
+            &:active{
+                background-color: #ccc;
+            }
+        }    
+    }    
+}

@@ -1,0 +1,15 @@
+<div page="login">
+    <form name="login">
+        <div class="item">
+            <span class="label">用户名:</span><input type="text" ng-model="user.userCode">
+        </div>
+        <div class="item">
+            <span class="label">密&#x3000;码:</span><input type="password" ng-model="user.password">
+        </div>
+        <input type="button" value="登录" class="btn" ng-click="clickHandle(user)">        
+        <div class="a clearfix">
+            
+            <a href="#/alter">修改密码</a>    
+        </div>        
+    </form>
+</div>

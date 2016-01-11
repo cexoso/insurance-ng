@@ -1,0 +1,29 @@
+[page=search] {
+  min-height: 50vh;
+  padding: 10px; }
+  [page=search] .item {
+    margin: 10px 0;
+    font-size: 0;
+    height: 40px;
+    border: 1px solid #ccc; }
+    [page=search] .item input {
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      border: none;
+      height: 100%;
+      display: inline-block;
+      font-size: 14px;
+      width: 100%; }
+  [page=search] .btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    height: 40px; }
+    [page=search] .btn:active {
+      background-color: #ccc; }

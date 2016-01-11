@@ -1,0 +1,15 @@
+angular.module('insurance').controller("loginCtrl",["$scope","$http","base","$filter","user","$state",function(s,$http,base,$filter,user,$state){
+    s.user={};    
+    s.clickHandle=function(u){
+        $http.post(base+"mvc/safeguard/loginSafeguard",u).success(function(d){
+            if(d.code!=200){
+                alert(d.msg);
+            }else{
+                user.set(d.data);                
+                $state.go("insurance");
+            }
+        }).error(function(d){
+            aler($filter("json")(d));
+        });
+    };    
+}]);

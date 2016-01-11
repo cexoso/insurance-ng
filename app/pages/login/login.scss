@@ -1,0 +1,52 @@
+[page=login]{
+    min-height:50vh;
+    padding:10px;
+    .item{
+        margin:10px 0;
+        font-size: 0;
+        height:40px;
+        width:100%;
+        display:table;
+        border:1px solid #ccc;
+        .label{
+            font-size:14px;
+            vertical-align: center;
+            display:inline-block;
+            width:4em;
+            display:table-cell;
+            vertical-align: middle;
+            padding:0 5px;
+        }
+        input{
+            display:table-cell;
+            appearance:none;
+            border:none;
+            height:100%;
+            display: inline-block;
+            font-size:14px;
+            width:100%;
+        }
+    }
+    .btn{
+        appearance:none;
+        outline:none;
+        border:1px solid #ccc;
+        display:block;
+        width:100%;
+        background-color: #fff;
+        height:40px;
+        &:active{
+            background-color: #ccc;
+        }
+    }
+    .a{
+        margin-top:5px;
+        font-size:12px;
+        a{
+            float:right;
+            text-decoration: none;
+            color:#ccc;
+        }    
+         
+    }
+}

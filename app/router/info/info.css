@@ -1,0 +1,71 @@
+[router=info] {
+  padding: 10px;
+  min-height: 100vh;
+  position: relative; }
+  [router=info] .container {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border: 1px solid #ccc;
+    overflow: auto; }
+    [router=info] .container .item {
+      padding: 5px; }
+      [router=info] .container .item .tips {
+        color: #C52626; }
+    [router=info] .container .show {
+      position: relative;
+      display: inline-block;
+      vertical-align: top; }
+      [router=info] .container .show.imgState {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 20; }
+        [router=info] .container .show.imgState img {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+      [router=info] .container .show img {
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 1px #000,0 0 0 2px #fff,0 0 0 3px #000;
+        margin: 10px 3px;
+        position: relative;
+        z-index: 2; }
+      [router=info] .container .show .tips {
+        position: absolute;
+        top: 45%;
+        left: 0;
+        width: 106px;
+        text-align: center;
+        -webkit-transform: translate(0, -50%) rotate(-5deg);
+                transform: translate(0, -50%) rotate(-5deg);
+        color: #aaa;
+        z-index: 1;
+        border-radius: 1px; }
+    [router=info] .container .btn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      outline: none;
+      border: 1px solid #ccc;
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      background-color: #fff;
+      height: 40px; }
+      [router=info] .container .btn:active {
+        background-color: #ccc; }

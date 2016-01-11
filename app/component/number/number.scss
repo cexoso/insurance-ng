@@ -1,0 +1,43 @@
+[directive="number"]{
+    font-size:14px;
+    height:100%;
+    display:table-cell;
+    .container{        
+        height:100%;
+        font-size:0;
+        .minus,.plus,.input{            
+            vertical-align: top;
+            font-size:14px;
+            .btn{
+                user-select: none;
+                display:inline-block;
+                height:100%;
+                width:33px;
+                text-align: center;
+                vertical-align: middle;
+                border:none;
+                line-height: 33px;
+                background-color: #333;
+                color:#fff;
+                &:active{
+                    background-color: #000;
+                }
+            }
+        }
+        .minus{
+            height:100%;
+            float:left;
+        }
+        .plus{
+            height:100%;
+            float:right;
+        }
+        .input{
+            margin:0 34px;
+            height:100%;
+            input{
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+angular.module('insurance').controller("infoCtrl",["$scope","$stateParams","order","wx","loading",function(s,$stateParams,order,wx,loading){
+    s.data={};
+    loading.push(order.get($stateParams).success(function(d){
+        s.data=d.data;
+    }));
+    s.clickHandle=function(){
+        if(!s.data.safeguardID){
+            return;
+        }
+        loading.push(wx.pay({
+            safeguardID:s.data.safeguardID
+        }));
+    }
+    s.imgState=false;
+    s.imgClickHandle=function(){
+        s.imgState=!s.imgState;
+    }
+}]);

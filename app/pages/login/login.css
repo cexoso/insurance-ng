@@ -1,0 +1,47 @@
+[page=login] {
+  min-height: 50vh;
+  padding: 10px; }
+  [page=login] .item {
+    margin: 10px 0;
+    font-size: 0;
+    height: 40px;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc; }
+    [page=login] .item .label {
+      font-size: 14px;
+      vertical-align: center;
+      display: inline-block;
+      width: 4em;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 5px; }
+    [page=login] .item input {
+      display: table-cell;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      border: none;
+      height: 100%;
+      display: inline-block;
+      font-size: 14px;
+      width: 100%; }
+  [page=login] .btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    height: 40px; }
+    [page=login] .btn:active {
+      background-color: #ccc; }
+  [page=login] .a {
+    margin-top: 5px;
+    font-size: 12px; }
+    [page=login] .a a {
+      float: right;
+      text-decoration: none;
+      color: #ccc; }

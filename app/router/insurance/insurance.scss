@@ -1,0 +1,118 @@
+[router=insurance]{
+    min-height:50vh;
+    padding:10px;
+    .item{
+        margin:10px 0;
+        font-size: 0;
+        height:40px;
+        width:100%;
+        display:table;
+        border:1px solid #ccc;     
+        &.invalid{
+            border:1px solid #da4f49;
+        }   
+        .label{
+            font-size:14px;
+            vertical-align: center;
+            display:inline-block;
+            width:5em;
+            display:table-cell;
+            vertical-align: middle;
+            padding:0 5px;
+        }
+        input{
+            display:table-cell;
+            appearance:none;
+            border:none;
+            height:37px;
+            display: inline-block;
+            font-size:14px;
+            width:100%;
+        }
+        .photo{
+            height:100%;
+            position:relative;
+            input{
+                opacity: 0;
+                position: relative;
+                z-index: 2;
+            }
+            .v{
+                position:absolute;
+                top: 0;
+                bottom:0;
+                left:0;    
+                right:0;
+                z-index: 1;
+                font-size: 14px;
+                vertical-align: middle;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+    }
+    .check{
+        display:inline-block;
+    }
+    .provision{
+        display:inline-block;        
+        input{
+            display:none;
+        }
+        label{
+            color:rgb(102, 51, 153);
+        }
+    }
+    .provision_show{
+        position:fixed;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right:0;
+        margin:10px;
+        padding:10px;
+        background-color: #ccc;
+        z-index: 11;
+        transform: scale(0);
+        overflow: auto;
+        transition:0.3s transform;
+        &.p_show{
+            transform: scale(1);
+        }
+    }
+    .btn{
+        appearance:none;
+        outline:none;
+        border:1px solid #ccc;
+        display:block;
+        width:100%;
+        background-color: #fff;
+        height:40px;
+        &:active{
+            background-color: #ccc;
+        }
+    }    
+    .show{
+        position:relative;
+        img{
+            width:100px;
+            height:100px;
+            box-shadow: 0 0 0 1px #000,0 0 0 2px #fff,0 0 0 3px #000;
+            margin:10px 3px;
+            position:relative;
+            z-index: 2;
+            display:inline-block;
+        }
+        .tips{
+            position:absolute;
+            top: 45%;
+            left:0;
+            width:106px;
+            text-align: center;
+            transform:translate(0,-50%) rotate(-5deg);
+            color:#aaa;
+            z-index: 1;
+            border-radius:1px;
+        }
+    }
+}

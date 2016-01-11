@@ -1,0 +1,46 @@
+<div router="insurance" ng-controller="insuranceCtrl">            
+    <form name="insurance" novalidate>
+        <div class="item" ng-class="{'invalid':insurance.name.$invalid&&insurance.name.$touched}">
+            <span class="label">姓&#x3000;&#x3000;名</span>
+            <input type="text" required name="name" ng-model="data.name"></div>            
+        <div class="item" ng-class="{'invalid':insurance.phone.$invalid&&insurance.phone.$touched}">
+            <span class="label">电&#x3000;&#x3000;话</span>
+            <input type="text" name="phone" required ng-pattern="/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i" ng-model="data.phone"></div>
+        <div class="item" ng-class="{'invalid':insurance.identityNo.$invalid&&insurance.identityNo.$touched}">
+            <span class="label">身份证号</span>
+            <input type="text" required ng-pattern="/^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/" name="identityNo" ng-model="data.identityNo"></div>
+        <div class="item" ng-class="{'invalid':insurance.phoneDetail.$invalid&&insurance.phoneDetail.$touched}">
+            <span class="label">投保手机</span>
+            <input type="text" required name="phoneDetail" ng-model="data.phoneDetail"></div>
+        <div class="item" ng-class="{'invalid':insurance.phoneIMEI.$invalid&&insurance.phoneIMEI.$touched}">
+            <span class="label">IMEI&#x3000;码</span>
+            <input type="text" required name="phoneIMEI" ng-model="data.phoneIMEI"></div>
+        <div class="item" ng-class="{'invalid':insurance.phoneImage.$invalid&&insurance.phoneImage.$touched}">
+            <span class="label">照&#x3000;&#x3000;片:</span>
+            <div class="photo" >
+                <input type="file" accept="image/*" imgbase name="phoneImage" required ng-model="phoneImage">
+                <span class="v">{{filename}}</span>
+            </div>
+        </div>
+        <div class="item">
+            <span class="label">份&#x3000;&#x3000;数:</span>
+            <input type="text" number default=1 min=1 max=5 ng-model="data.safeNum"></div>            
+        <div class="check">
+            <input id="insurance_c" ng-model="insurance_c" type="checkbox"><label for="insurance_c">我已阅读并同意</label>
+        </div>
+        <div class="provision">
+            <input id="insurance_p" ng-model="insurance_p" type="checkbox"><label for="insurance_p">《投保须知》</label>
+        </div>
+        <label for="insurance_p">
+        <div class="provision_show" ng-class="{'p_show':insurance_p}" for="insurance_p">
+            <div ng-include="'router/insurance/provision/provision.html'">
+            </div>    
+        </div>        
+        </label>
+        <input type="button" value="投保" ng-disabled="!insurance_c" class="btn" ng-click="clickHandle()">
+    </form>
+    <div class="show">        
+        <img ng-src="{{data.phoneImage}}">
+        <div class="tips">缩 略 图</div>
+    </div>
+</div>
