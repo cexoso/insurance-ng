@@ -1,6 +1,7 @@
 'use strict';
-angular.module('insurance', [  
-  'ui.router',  
+window.local=true;
+angular.module('insurance', [
+  'ui.router',
   'controller',
   'directive',
   'services',
@@ -53,5 +54,8 @@ function ($stateProvider, $urlRouterProvider) {
 angular.module('controller', []);
 angular.module('directive', []);
 angular.module('services', []);
-angular.module('services').constant("base","http://192.168.0.145:8080/Patica2.0/");
-// angular.module('services').constant("base","/Patica2.0/");
+if(local){
+  angular.module('services').constant("base","http://192.168.0.145:8080/Patica2.0/");
+}else{
+  angular.module('services').constant("base","/Patica2.0/");
+}

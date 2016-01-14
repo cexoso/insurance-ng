@@ -4,7 +4,7 @@
             <span class="label">用&ensp;户&ensp;名:</span><input type="text" name="userCode" required ng-model="user.userCode">
         </div>
         <div class="item" ng-class="{'invalid':alter.oldpassword.$invalid&&alter.oldpassword.$touched}">
-            <span class="label">当前密码:</span><input type="password" required name="oldpassword" ng-pattern="/[a-z]/" ng-model="user.oldpassword">
+            <span class="label">当前密码:</span><input type="password" required name="oldpassword" ng-model="user.oldpassword">
         </div>
         <div class="item" ng-class="{'invalid':alter.newpassword.$invalid&&alter.newpassword.$touched}">
             <span class="label">新&ensp;密&ensp;码:</span><input type="password" same="user.newpassword1" name="newpassword" required ng-model="user.newpassword">
